@@ -9,17 +9,44 @@
 
         <title>My First Web Page</title>
 
-        <link rel="icon" href="html5.ico" type="image/x-icon">
+        <link rel="icon" href="img/html5.ico" type="image/x-icon">
         <link rel="stylesheet" href="main.css" type="text/css">
 
     </head>
 
     <body>
-        <h1>Hello World!</h1>
+        <h1>Goals for this week</h1>
 
         <hr>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#html">Learn HTML</a>
+                </li>
+                <li>
+                    <a href="#vacation">Planning a vacation</a>
+                </li>
+            </ul>
+        </nav>
+
+        <hr>
+        <section id="html">
+
         <h2>I'm ready to learn HTML</h2>
         <p>This is my paragraph</p>
+
+        <figure>
+            <img src="img/html5.ico" alt="HTML5 logo" title="I am learning HTML5" width="200" height="190">
+            <figcaption>
+                An example of HTML5 Page
+            </figcaption>
+            <p>
+                <code>
+                    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+                </code>
+            </p>
+        </figure>
 
         <h3>My daily schedule</h3>
         <p>Let me tell you how:</p>
@@ -28,24 +55,42 @@
             <li>...I learn more about web dev </li>
             <li>...I learn more about <abbr title="Website Development"><a href="https://www.roadmap.sh/full-stack">web dev</a></abbr> </li>
         </ol>
+        </section>
         <hr>
 
         <!--This will not show on the page because it is a comment-->
+        <section id="vacation">
         <h2>I'm planning a vacation</h2>
         <p>I want to go to <strong>lahore</strong></p>
 
         <p>I have heard a lot of things about going here:</p>
         <address>
-            Park View City<br>
-            Lahore<br>
+            Park View City, Multan Road<br>
+            Lahore, Punjab, Pakistan<br>
         </address> 
 
         <h3>Place I'd like to visit</h3>
         <ul>
-        <li><p>Shahi Qilla</p></li>
-        <li><p>Jahangir Tomb</p></li>
+        <li><p>I have heard good things about Lahore Fort </p>
+        <figure>
+            <img src="img/lahore_fort.png" alt="Lahore Fort" title="Lahore Fort visit" width="262" height="192" loading="lazy">
+            <figcaption>
+                Lahore Fort
+            </figcaption>
+        </figure>
+
+        </li>
+
+        <li>
+            <figure>
+            <p>Jahangir's Tomb</p>
+                <img src="img/jahangir_tomb.png" alt="Jahangir's Tomb" title="Jahangir tomb" width="262" height="183" loading="lazy">
+            </figure>
+            <figcaption>
+                Jahangir's Tomb
+            </figcaption>
+        </li>
         </ul>
-        <hr>
 
         <dl> <!--Description list-->
             <dt>North Pole</dt> <!--Description term-->
@@ -55,8 +100,14 @@
             <dd>This is also too cold</dd>
         </dl>
 
+        </section>
+        <hr>
+
         &lt;&lt;&lt; &copy; <a href="about.html">Anas Sabir</a> &gt;&gt;&gt;
 
+        <p>
+            <a href="#">Back to top</a>
+        </p>
     </body>
 
 </html>
