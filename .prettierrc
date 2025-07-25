@@ -1,0 +1,6 @@
+{
+  "htmlWhitespaceSensitivity": "ignore",
+  "htmlSelfClosing": "never",
+  "singleQuote": true,
+  "trailingComma": "none"
+}
