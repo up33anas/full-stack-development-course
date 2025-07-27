@@ -1,5 +1,30 @@
-p {
-    font-size: 40px;
-    color: red;
+* {
+  background-color: slategray;
 }
 
+header {
+  color: rgb(red, green, blue);
+  border-width: 5px;
+  border-color: #fff;
+  border-style: dashed;
+  text-align: center;
+}
+
+body {
+  font-size: 24px;
+}
+
+h2 {
+  size: 32px;
+}
+
+.first {
+  border-style: groove;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgb(106, 106, 139);
+}
+
+#text {
+    color: rgb(80, 14, 85);
+}
