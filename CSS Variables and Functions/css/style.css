@@ -8,7 +8,9 @@
 :root {
     /* Font */
     --FF: Arial, sans-serif;
-    --FS:  1.5rem;
+    /* --FS:  max(1.75rem, 3vh); */
+    --FS: clamp(1.75rem, 3vh, 2rem);
+    --FS-SM:  max(1.25rem, 2vh, 1.5rem);
     --FS-XL: 3rem;
 
     /* Color */
@@ -23,7 +25,7 @@
     --SQUARE-SIZE: max(150px, 20vw);
 
     /* General */
-    --PADDING: 0.5rem;
+    --PADDING: 0.5em;
     --SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);
     --BORDERS: 2px solid var(--DARK-COLOR);
 }
@@ -94,16 +96,39 @@ nav a:active {
 
 main {
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-flow: row wrap;
-    gap: min(4vw, 15px);
-    padding: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 300px));
+    gap: min(2px, 20px);
+    padding: var(--PADDING);
+
+    /* display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start; */
+}
+
+main section {
+    flex-grow: 1;
+    padding: var(--PADDING);
+}
+
+main aside {
+    background-color: hsla(0, 0%, 20%, 0.8);
+    color: var(--LIGHT-COLOR);
+    font-size: var(--FS-SM);
+    font-style: italic;
+    padding: var(--PADDING);
+}
+
+p {
+    font-size: var(--FS);
 }
 
 footer {
     bottom: 0;
+}
+
+.content {
+    margin-top: 20px;
 }
 
 .square--highlight {
@@ -112,8 +137,8 @@ footer {
 
 .square {
     background-color: var(--SQUARE-BGCOLOR);
-    width: var(--SQUARE-SIZE);
-    height: var(--SQUARE-SIZE);
+    /* width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE); */
 
     border: var(--BORDERS);
     border-radius: 15px;
@@ -121,4 +146,43 @@ footer {
     place-content: center;
     font-size: var(--FS-XL);
     box-shadow: var(--SHADOWS);
+}
+
+@media screen and (min-width: 576px) {
+    main {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    main section {
+        width: calc(70% - 5px);
+    }
+
+    main aside {
+        width: calc(30% - 5px);
+    }
+}
+
+a:any-link {
+    color: firebrick;
+}
+
+a:hover,
+a:focus {
+    filter: brightness(200%);
+}
+
+.tooltip {
+    border-bottom: 1px solid orange;
+    position: relative;
+}
+
+.tooltip:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -20px;
+    white-space: nowrap;
+    background-color: var(--DARK-COLOR);
+    padding: var(--PADDING);
+    border-radius: 15px;
 }
