@@ -57,6 +57,7 @@ nav {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  place-items: 200px;
 }
 
 main {
@@ -161,4 +162,3 @@ main {
   text-align: center;
   color: #1e293b;
 }
-

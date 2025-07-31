@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    /* Font */
+    --FF: Arial, sans-serif;
+    --FS:  1.5rem;
+    --FS-XL: 3rem;
+
+    /* Color */
+    --BGCOLOR: #33333363;
+    --ALT-BGCOLOR: #333;
+    --RADICAL-COLOR: whitesmoke;
+    --LIGHT-COLOR: whitesmoke;
+    --DARK-COLOR: #000;
+
+    /* Square */
+    --SQUARE-BGCOLOR: papayawhip;
+    --SQUARE-SIZE: max(150px, 20vw);
+
+    /* General */
+    --PADDING: 0.5rem;
+    --SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);
+    --BORDERS: 2px solid var(--DARK-COLOR);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --BG-COLOR: #000;
+        --ALT-BGCOLOR: #333;
+        --RADIAL-COLOR: rgb(217, 217, 217);
+        --SQUARE-BGCOLOR: purple;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: var(--FS), var(--FF);
+    min-height: 100vh;
+
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient(var(--RADICAL-COLOR), var(--BGCOLOR));
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+footer {
+    position: sticky;
+    background-color: var(--ALT-BGCOLOR);
+    color: whitesmoke;
+    text-align: center;
+    z-index: 1;
+}
+
+header,
+nav, 
+footer {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    padding: val(--PADDING);
+}
+
+header {
+    top: 0;
+}
+
+nav {
+    background-color: var(--LIGHT-COLOR);
+    color: var(--DARK-COLOR);
+    border-bottom: var(--BORDERS);
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: var(--SHADOWS);
+}
+
+nav :is(a:hover, a:focus) {
+    color: hsla(0, 0%, 20%, 0.6);
+}
+
+nav a:active {
+    color: red;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: min(4vw, 15px);
+    padding: 10px 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+.square--highlight {
+    --SQUARE-BGCOLOR: cornflowerblue;
+}
+
+.square {
+    background-color: var(--SQUARE-BGCOLOR);
+    width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE);
+
+    border: var(--BORDERS);
+    border-radius: 15px;
+    display: grid;
+    place-content: center;
+    font-size: var(--FS-XL);
+    box-shadow: var(--SHADOWS);
+}
