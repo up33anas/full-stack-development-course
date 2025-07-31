@@ -1,0 +1,107 @@
+/* Begin Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img { 
+    display: block;
+}
+/* End Reset */
+
+/* Utility Classes */
+
+.nowrap {
+    white-space: nowrap; /* Prevent text breaking */
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+/* End Utility Classes */
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    background: aliceblue;
+    /* background-image:   url('../img/bubbles.png'), 
+                        linear-gradient(to left, steelblue, white);
+
+    background-repeat: repeat-y, no-repeat;
+    background-position: right center;
+    background-size: 20%, auto; */
+
+    background: repeat-y right center url('../img/bubbles.png'),
+                linear-gradient(to left, steelblue, white);
+
+    background-size: 20%, auto;
+}
+
+.container {
+    /* background-color: rgb(251, 210, 156); */
+    background-image: url('../img/map-2176x1451.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: cover;
+}
+
+.hero {
+    border-bottom: 2px solid black;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    background-color: hsla(0, 0%, 0%, 0.35);
+
+}
+
+.h1 {
+    font-size: 5rem;
+    color: aliceblue;
+    text-shadow: 2px 2px 5px #000;
+    /* background-color: hsla(0, 0%, 0%, 0.400);
+    padding: 0.25rem;
+    border-radius: 10px; */
+    
+}
+
+.profile-pic-figure {
+    width: 35%;
+}
+
+.profile-pic-figure img {
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double gray;
+    border-radius: 50%;
+}
+
+.example {
+    margin-top: 1rem;
+    padding-left: 20px;
+    border: 1px solid #f00;
+}
+
+.example img {
+    width: 25%;
+    height: auto;
+}
+
+.clip {
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: center;
+    background-image: url('../img/scenic-2200x1331.png');
+    background-size: 100%;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    /* color: hsla(0, 0%, 0%, 0.2); */
+    color: transparent;
+
+    background-clip: text;
+}
