@@ -1,0 +1,25 @@
+body {
+  padding: 10%;
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  background-color: lightgrey;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+p {
+  text-align: justify;
+  text-decoration: solid;
+  text-transform: lowercase;
+  text-indent: 1.5em;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  word-spacing: 0.5em;
+  font-weight: bolder;
+  font-style: oblique;
+}

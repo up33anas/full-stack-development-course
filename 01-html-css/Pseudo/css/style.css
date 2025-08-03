@@ -1,0 +1,43 @@
+/* PSEUDO-CLASSES */
+
+button:hover {
+    background-color: #008CBA;
+    color: white;
+    cursor: pointer;
+}
+
+.nth-child-demo:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+input:focus {
+    outline: 2px solid green;
+}
+
+.visited-link:visited {
+     color: purple;
+}
+
+
+/* PSEUDO-ELEMENTS */
+
+.before-demo::before {
+    content: "👉 ";
+    color: orange;
+}
+
+.after-demo::after {
+    content: " ✔";
+    color: green;
+}
+
+.first-line-demo::first-line {
+    font-weight: bold;
+    color: darkblue;
+}
+
+.first-letter-demo::first-letter {
+    font-size: 200%;
+    color: crimson;
+    font-weight: bold;
+}

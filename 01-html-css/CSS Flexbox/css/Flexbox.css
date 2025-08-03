@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    border: 1px solid #000;
+    display: flex;
+    gap: 1rem;
+    justify-content: center; /* Aligns items evenly with equal space around them */
+    align-items: center;
+    flex-direction: row-reverse; /* Stacks items horizontally in reverse order of numbers*/
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if necessary */
+    flex-flow: row wrap; /* Shorthand for flex-direction and flex-wrap */
+    align-content: space-evenly; /* Distributes space evenly between lines */
+}
+
+.box {
+    /* min-width: 100px; */
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+
+    /* flex-basis: 250px; Sets the base size of the flex item */
+    /* flex-grow: 1; Allows the item to grow to fill available space; */
+    /* flex-shrink: 1; Allows the item to shrink if necessary */
+
+    flex: 1 2 250px;
+}
+
+.box:nth-child(2) {
+    /* flex-grow: 2; This box will take up twice the space of others */
+    /* flex-shrink: 2; This box will shrink twice as fast as others */
+
+    flex: 2 2 250px;
+    order: 0; /* Moves this box to the end of the order */
+}
