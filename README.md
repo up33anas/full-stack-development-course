@@ -7,6 +7,7 @@ Welcome to my personal full stack web development learning journey. This reposit
 ## 🧠 Tech Stack Overview
 
 ### 🖥️ Frontend
+
 - HTML5, CSS3
 - JavaScript (ES6+)
 - React.js
@@ -16,6 +17,7 @@ Welcome to my personal full stack web development learning journey. This reposit
 - Next.js
 
 ### 🧩 Backend
+
 - Node.js
 - Express.js
 - NestJS
@@ -23,10 +25,12 @@ Welcome to my personal full stack web development learning journey. This reposit
 - MongoDB / PostgreSQL
 
 ### 📱 Mobile
+
 - React Native
 - Expo
 
 ### ⚙️ Tools & Services
+
 - Git & GitHub
 - VS Code
 - Postman
@@ -37,7 +41,7 @@ Welcome to my personal full stack web development learning journey. This reposit
 
 ## 📁 Repository Structure
 
-```bash
+````bash
 fullstack-roadmap-2025/
 │
 ├── 01-html-css/             # HTML & CSS notes, layouts, and mini-projects
@@ -48,7 +52,6 @@ fullstack-roadmap-2025/
 ├── 06-nextjs/               # Fullstack web apps using Next.js
 ├── 07-nestjs/               # Scalable APIs using NestJS framework
 ├── 08-django/               # Backend with Django (optional path)
-├── 
 └── # 🚀 Full Stack Web Development Journey
 
 Welcome to my personal full stack web development learning journey. This repository serves as a structured guide and collection of all the projects, code snippets, and notes as I master modern development tools — from frontend to backend and web to mobile.
@@ -99,3 +102,4 @@ fullstack-development-course/
 ├── 07-nestjs/               # Scalable APIs using NestJS framework
 ├── 08-django/               # Backend with Django (optional path)
 └── 09-react-native/         # Cross-platform mobile apps using React Native
+````
