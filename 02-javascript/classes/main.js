@@ -1,8 +1,9 @@
 // Javascript Classes
 class Pizza {
+  #size;
   constructor(pizzaType, pizzaSize) {
     this.type = pizzaType;
-    this.size = "medium";
+    this.#size = "medium";
     this.crust = "original";
     this.toppings = [];
   }
@@ -20,7 +21,7 @@ class Pizza {
   }
   bake() {
     console.log(
-      `Baking a ${this.size} ${this.crust} ${this.type} crust pizza.`
+      `Baking a ${this.#size} ${this.crust} ${this.type} crust pizza.`
     );
   }
 }
