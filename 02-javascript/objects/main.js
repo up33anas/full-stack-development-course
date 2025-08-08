@@ -14,4 +14,30 @@ const anotherObject = {
   },
 };
 console.log(myObject);
-console.log(anotherObject.action());
+
+const vehicle = {
+  wheels: 4,
+  engine: function () {
+    return "Vroom Vroom!";
+  },
+};
+
+const truck = Object.create(vehicle);
+truck.doors = 2;
+console.log(truck.wheels); // 4
+console.log(truck.doors); // 2
+
+const car = Object.create(vehicle);
+car.doors = 4;
+car.engine = function () {
+  return "Whoosh Whoosh";
+};
+console.log(car.wheels);
+console.log(car.engine());
+
+const tesla = Object.create(car);
+console.log(tesla.wheels);
+tesla.engine = function () {
+  return "Sush!";
+};
+console.log(tesla.engine());
