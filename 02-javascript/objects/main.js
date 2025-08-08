@@ -13,7 +13,7 @@ const anotherObject = {
     return `Time for a ${this.beverage.type} ${this.beverage.name}`;
   },
 };
-console.log(myObject);
+console.log(anotherObject.answer);
 
 const vehicle = {
   wheels: 4,
@@ -41,3 +41,36 @@ tesla.engine = function () {
   return "Sush!";
 };
 console.log(tesla.engine());
+
+// Key Value pairs
+const band = {
+  vocals: "Robert Plant",
+  guiter: "Jimmy Page",
+  bass: "Anyone",
+  drums: "Doe",
+};
+
+delete band.drums;
+console.log(band.hasOwnProperty("drums"));
+
+console.log(Object.keys(band));
+console.log(Object.values(band));
+
+for (let job in band) {
+  console.log(`On ${job}, it's ${band[job]}`);
+}
+
+// Destructuring objects
+const { guiter: myVariable, bass: myBass } = band;
+console.log(myVariable);
+console.log(myBass);
+
+const { guiter, vocals, bass, drums } = band;
+console.log(guiter);
+console.log(vocals);
+
+function sings({ vocals }) {
+  return `${vocals} sings`;
+}
+
+console.log(sings(band));
