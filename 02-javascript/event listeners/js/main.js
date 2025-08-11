@@ -26,20 +26,33 @@ const initApp = () => {
   const div = view.querySelector("div");
   const h2 = div.querySelector("h2");
 
-  div.addEventListener("click", (evt) => {
-    evt.target.getElementsByClassName.backgroundColor = "purple";
-  });
-
   view.addEventListener(
     "click",
     (evt) => {
-      view.classList.add("purple");
+      view.classList.toggle("purple");
+      view.classList.toggle("darkblue");
     },
     false
   );
 
+  div.addEventListener("click", (evt) => {
+    div.classList.toggle("blue");
+    div.classList.toggle("black");
+  });
+
   h2.addEventListener("click", (evt) => {
-    evt.stopPropagation();
-    evt.target.textContent = "Clicked";
+    const myText = evt.target.textContent;
+    myText === "My 2nd View"
+      ? (evt.target.textContent = "Clicked")
+      : (evt.target.textContent = "My 2nd View");
+  });
+
+  const nav = document.querySelector("nav");
+  nav.addEventListener("mouseover", (evt) => {
+    evt.target.classList.add("height100");
+  });
+
+  nav.addEventListener("mouseout", (evt) => {
+    evt.target.classList.remove("height");
   });
 };
