@@ -53,6 +53,13 @@ const initApp = () => {
   });
 
   nav.addEventListener("mouseout", (evt) => {
-    evt.target.classList.remove("height");
+    evt.target.classList.remove("height100");
+  });
+
+  const view3 = document.querySelector("#view3");
+  const myForm = view3.querySelector("#myForm");
+  myForm.addEventListener("submit", (evt) => {
+    evt.preventDefault();
+    console.log("submit event");
   });
 };
