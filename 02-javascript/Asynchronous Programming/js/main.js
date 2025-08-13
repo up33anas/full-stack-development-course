@@ -144,12 +144,46 @@ const postData = async (jokeObj) => {
 
 postData(jokeObject);
 
-const requestJoke = async (firstname, lastname) => {
-  const response = await fetch(
-    `http://api.icndb.com/jokes/random?firstname=${firstname}&lastname=${lastname}&limitTo=[nerdy]`
-  );
-  const jsonResponse = await response.json();
-  console.log(jsonResponse.value.joke);
-};
+// const requestJoke = async (firstname, lastname) => {
+//   const response = await fetch(
+//     `http://api.icndb.com/jokes/random?firstname=${firstname}&lastname=${lastname}&limitTo=[nerdy]`
+//   );
+//   const jsonResponse = await response.json();
+//   console.log(jsonResponse.value.joke);
+// };
 
 requestJoke("Anas", "Sabir");
+
+////////////////////////////////////////////
+////////////////////////////////////////////
+const getDataFromForm = () => {
+  const requestObj = {
+    firstname: "Anas",
+    lastname: "Sabir",
+    categories: ["nerdy"],
+  };
+  return requestObj;
+};
+
+const buildRequestUrl = (requestData) => {
+  return `http://api.icnb.com/jokes/random?firstname=${requestData.firstname}&lastname=${requestData.lastname}&limitTo=${requestData.categories}`;
+};
+
+const requestJoke = async (url) => {
+  const response = await fetch(url);
+  const jsonResponse = await response.json();
+  const joke = jsonResponse.value.joke;
+  postJokeToPage(joke);
+};
+
+const postJokeToPage = (joke) => {
+  console.log(joke);
+};
+
+// Procedural workflow function
+const processJokeRequest = async () => {
+  const requestData = getDataFromForm();
+  const requestUrl = buildRequestUrl(requestData);
+  await requestJoke(requestUrl);
+  console.log("Finished!");
+};
